@@ -25,7 +25,7 @@ def rotate(img, angle, rotPoint=None):
     if rotPoint is None:
         rotPoint=(width//2,height//2)
     
-    rotMat = cv2.getRotationMatrix2D(rotPoint,angle,scale=1.0)
+    rotMat = cv2.getRotationMatrix2D(rotPoint,angle,scale=3.0)
     dimensions =(width,height)
 
     return cv2.warpAffine(img,rotMat,dimensions)
@@ -49,5 +49,7 @@ flip=cv2.flip(img,-1)
 
 #cropping 
 cropped = img[200:400,200:400]
+cv2.imshow('lol', flip)
+cv2.imshow('cropped', cropped)
 
 cv2.waitKey(0)

@@ -8,7 +8,7 @@ greyscale=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 cv2.imshow('Grey',greyscale)
 
 #blur
-blur=cv2.GaussianBlur(img,(9,9),cv2.BORDER_DEFAULT)
+blur=cv2.GaussianBlur(img,(11,11),cv2.BORDER_DEFAULT) # Will possibly use this in 1702, ksize has to be odd numbers and defines how much blurring happens
 #ksize has to be odd numbers
 cv2.imshow('Blur',blur)
 
